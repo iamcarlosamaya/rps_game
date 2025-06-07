@@ -134,10 +134,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const message = document.getElementById("game-outcome");
 
     // Add Event listeners
-    const buttons = document.querySelectorAll('.player-panel button');
+    const buttons = document.getElementById('buttons-container');
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
+            // console.log(button.parentNode);
             const myResponse = button.textContent;
             
             //console.log('Selection captured:', myResponse);
@@ -166,11 +167,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (humanScore === 5) {
                 playerScoreDisplay.textContent = 0;
-                computerScoreDisplay.textContentn = 0;
+                computerScoreDisplay.textContent = 0;
                 message.textContent = "Game! You win!";
             } else if (computerScore === 5) {
                 playerScoreDisplay.textContent = 0;
-                computerScoreDisplay.textContentn = 0;
+                computerScoreDisplay.textContent = 0;
                 message.textContent = "Game! Computer wins!";
             }
 
